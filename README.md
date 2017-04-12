@@ -1,5 +1,7 @@
 # compare-directories
 
+![AppVeyor](https://ci.appveyor.com/api/projects/status/oqu3x6r7ts114srh?svg=true&passingText=master%20%E2%9C%93) [![Travis CI](https://img.shields.io/travis/mlewand/compare-directories.svg?style=flat)](https://travis-ci.org/mlewand/compare-directories)
+
 A simple function for to assert two directories.
 
 Function access everything using asynchronous APIs to make sure it's efficient.
