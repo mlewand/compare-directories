@@ -1,6 +1,6 @@
 {
   "name": "compare-directories",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Assertion to compare two directories.",
   "homepage": "",
   "author": {
@@ -38,7 +38,7 @@
     "fs-promise": "^2.0.2",
     "recursive-readdir": "^2.1.1"
   },
-  "peerDependencies":{
+  "peerDependencies": {
     "chai": "^3.5.0"
   }
 }
