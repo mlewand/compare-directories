@@ -1,10 +1,12 @@
 {
+	"env": {
+		"mocha": true
+	},
 	"globals": {
-		"describe": true,
-		"it": true,
-		"before": true,
-		"beforeEach": true,
-		"after": true,
-		"afterEach": true
+		"expect": true,
+		"sinon": true
+	},
+	"rules": {
+		"no-unused-expressions": "off" // Chai expect( foo ).to.be.false; doesn't play well with this.
 	}
 }

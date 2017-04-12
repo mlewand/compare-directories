@@ -14,8 +14,7 @@ describe( 'compare-directories', function() {
 			output = path.join( __dirname, '_fixtures', 'different', 'output' );
 
 		return expect( compareDirectories( output, input, {
-			diff: true,
-			skipEol: false
+			diff: true
 		} ) ).to.eventually.be.rejectedWith( 'is different from' );
 	} );
 
@@ -24,8 +23,26 @@ describe( 'compare-directories', function() {
 			output = path.join( __dirname, '_fixtures', 'same', 'output' );
 
 		return compareDirectories( output, input, {
+			diff: true
+		} );
+	} );
+
+	it( 'supports can skips incompatible eols', () => {
+		const input = path.join( __dirname, '_fixtures', 'eols', 'unixEol' ),
+			output = path.join( __dirname, '_fixtures', 'eols', 'winEol' );
+
+		return compareDirectories( output, input, {
 			diff: true,
 			skipEol: true
 		} );
+	} );
+
+	it( 'fails with incompatible eols', () => {
+		const input = path.join( __dirname, '_fixtures', 'eols', 'unixEol' ),
+			output = path.join( __dirname, '_fixtures', 'eols', 'winEol' );
+
+		expect( compareDirectories( output, input, {
+			skipEol: false
+		} ) ).to.eventually.be.rejected;
 	} );
 } );
