@@ -15,7 +15,7 @@ $ npm install --save-dev compare-directories
 ```js
 const compareDirectories = require( 'compare-directories' );
 
-it( 'passes for identical dirs', () => {
+it( 'passes with identical dirs', () => {
 	const input = path.join( __dirname, '_fixtures', 'same', 'input' ),
 		output = path.join( __dirname, '_fixtures', 'same', 'output' );
 
